@@ -20,6 +20,7 @@ Define a class which inherits from `Daemon` and has a `run()` method (which is w
   
 
 Create a new object of your class, specifying where you want your PID file to exist:
+  	
   	daemon_object = daemon("./pid.pid")
   	daemon_object.start()	
 
