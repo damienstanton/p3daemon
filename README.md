@@ -43,7 +43,7 @@ To do this, just call the `run()` method directly.
 Continuous execution
 ---------------------
 
-The `run()` method will be executed just once so if you want the daemon to be doing stuff continuously you may wish to use the [sched][1] module to execute code repeatedly ([example][2]).
+The `run()` method will be executed once so if you want the daemon to be doing stuff continuously you may wish to use the [sched][1] module to execute code repeatedly ([example][2]).
 
 Distributed under the `MIT license`
 
