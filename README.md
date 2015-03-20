@@ -20,8 +20,8 @@ Define a class which inherits from `Daemon` and has a `run()` method (which is w
   
 
 Create a new object of your class, specifying where you want your PID file to exist:
-  daemon_object = daemon("./pid.pid")
-  daemon_object.start()	
+  	daemon_object = daemon("./pid.pid")
+  	daemon_object.start()	
 
 Actions
 ---------------------
@@ -37,7 +37,7 @@ This is useful for debugging because you can start the code without making it a 
 
 To do this, just call the `run()` method directly.
 
-	pineMarten.run()
+	daemon_object.run()
 
 Continuous execution
 ---------------------
