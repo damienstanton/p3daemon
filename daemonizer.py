@@ -65,10 +65,10 @@ class Daemon(object):
             # Redirect standard file descriptors
             sys.stdout.flush()
             sys.stderr.flush()
-            si = file(self.stdin, 'r')
-            so = file(self.stdout, 'a+')
+            si = open(self.stdin, 'r')
+            so = open(self.stdout, 'a+')
             if self.stderr:
-                se = file(self.stderr, 'a+', 0)
+                se = open(self.stderr, 'a+', 0)
             else:
                 se = so
             os.dup2(si.fileno(), sys.stdin.fileno())
@@ -87,7 +87,7 @@ class Daemon(object):
         atexit.register(
             self.delpid)  # Make sure pid file is removed if we quit
         pid = str(os.getpid())
-        file(self.pidfile, 'w+').write("%s\n" % pid)
+        open(self.pidfile, 'w+').write("%s\n" % pid)
 
     def delpid(self):
         os.remove(self.pidfile)
@@ -102,7 +102,7 @@ class Daemon(object):
 
         # Check for a pidfile to see if the daemon already runs
         try:
-            pf = file(self.pidfile, 'r')
+            pf = open(self.pidfile, 'r')
             pid = int(pf.read().strip())
             pf.close()
         except IOError:
@@ -171,7 +171,7 @@ class Daemon(object):
 
     def get_pid(self):
         try:
-            pf = file(self.pidfile, 'r')
+            pf = open(self.pidfile, 'r')
             pid = int(pf.read().strip())
             pf.close()
         except IOError:

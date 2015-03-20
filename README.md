@@ -14,14 +14,14 @@ Define a class which inherits from `Daemon` and has a `run()` method (which is w
 
 	from daemonizer import Daemon
 	
-	class pantalaimon(Daemon):
+	class daemon(Daemon):
 		def run(self):
-			# Do stuff
-			
-Create a new object of your class, specifying where you want your PID file to exist:
+			print("Test Okay")
+  
 
-	pineMarten = pantalaimon('/path/to/pid.pid')
-	pineMarten.start()
+Create a new object of your class, specifying where you want your PID file to exist:
+  daemon_object = daemon("./pid.pid")
+  daemon_object.start()	
 
 Actions
 ---------------------
