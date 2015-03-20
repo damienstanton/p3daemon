@@ -12,7 +12,7 @@ Usage
 
 Define a class which inherits from `Daemon` and has a `run()` method (which is what will be called once the daemonization is completed.
 
-	from daemon import Daemon
+	from daemonizer import Daemon
 	
 	class pantalaimon(Daemon):
 		def run(self):
