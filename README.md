@@ -1,7 +1,7 @@
 Python daemonizer class
 ====================
 
-![](https://travis-ci.org/damienstanton/p3daemon.svg?branch=master)
+[![Circle CI](https://circleci.com/gh/damienstanton/p3daemon.svg?style=svg)](https://circleci.com/gh/damienstanton/p3daemon)
 
 This is a Python class that will daemonize your Python script so it can continue running in the background. It works on Unix, Linux and OS X, creates a PID file and has standard commands (start, stop, restart) + a foreground mode.
 
